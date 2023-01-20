@@ -1,0 +1,226 @@
+$font-size--md-large: 24px;
+
+.aside-page {
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &--hidden {
+    display: none;
+
+    @media (min-width: 1400px) {
+      display: block;
+    }
+  }
+
+  &--active {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: $screen330) {
+      display: none;
+    }
+    @media (min-width: 1400px) {
+      display: none;
+    }
+  }
+  .popup {
+    color: $bold-color;
+    background-color: $white-color;
+    max-width: 320px;
+    //padding-bottom: 32px;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+    min-height: 750px;
+
+    @media (min-width: 1400px) {
+      height: 100%;
+    }
+
+    &__container-main {
+      display: flex;
+      flex-direction: column;
+      max-height: 800px;
+      height: 85%;
+      margin-top: 10px;
+
+      @media (min-height: 800px) {
+        justify-content: space-between;
+        margin-top: 15%;
+      }
+    }
+
+    &__footer {
+      margin-left: 24px;
+      margin-bottom: 30px;
+      //margin-top: auto;
+      //align-self: flex-end;
+    }
+
+    &__header {
+      display: flex;
+      max-height: 120px;
+      padding: 24px 24px 24px 24px;
+      align-items: center;
+      height: 88px;
+      max-height: 88px;
+      box-sizing: border-box;
+    }
+
+    &__burger-item {
+      height: 40px;
+      max-height: 40px;
+      margin-right: 17px;
+      @media (min-width: 1200px) {
+        margin-right: inherit;
+      }
+    }
+    &__Group-item {
+      margin-right: 78px;
+    }
+    &__search-item {
+      height: 40px;
+      max-height: 40px;
+    }
+    &__main {
+      display: flex;
+      flex-direction: column;
+      font-size: $font-size;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+
+    &__slider-item {
+      margin-left: 24px;
+      margin-bottom: 32px;
+
+      &:hover {
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+    &__main-item {
+      margin-left: 20px;
+      color: $grey_text-color;
+    }
+    &__first-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    &__divider {
+      max-height: 32px;
+    }
+    &__img-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &__for-icons {
+      display: flex;
+      //margin-bottom: 16px;
+      margin-top: auto;
+    }
+    &__icon {
+      margin-right: 16px;
+    }
+    &__information {
+      margin-top: 12px;
+    }
+    &__user-mail {
+      margin-bottom: 12px;
+      font-size: $font-size;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+
+      &:hover {
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+    &__phone-number {
+      margin-bottom: 8px;
+      font-size: $font-size--md-large;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+
+      @media (min-height: 850px) {
+        margin-bottom: 40px;
+      }
+
+      &:hover {
+        font-weight: 800;
+        cursor: pointer;
+      }
+    }
+    &__change-language {
+      display: flex;
+
+      font-size: $font-size;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+    &__language {
+      margin-right: 7px;
+
+      &:hover {
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+    &__main-language {
+      color: $grey_text-color;
+
+      &:hover {
+        font-weight: inherit;
+        cursor: inherit;
+      }
+    }
+
+    &__hover-image {
+      &--hidden {
+        @media (min-width: 1200px) {
+          display: none;
+        }
+      }
+      &:hover {
+        animation-name: hover-item;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+    }
+    &__CPS:hover {
+      animation-name: hover-CPS;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@keyframes hover-item {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+@keyframes hover-CPS {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

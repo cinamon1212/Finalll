@@ -1,0 +1,75 @@
+@import './about-company.scss';
+@import './popup.scss';
+@import './slider-brand.scss';
+@import './aside-items.scss';
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.eot');
+  src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+    url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Bold.woff') format('woff'),
+    url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-DemiBold.eot');
+  src: local('TT Lakes DemiBold'), local('TTLakes-DemiBold'),
+    url('../fonts/TTLakes-DemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-DemiBold.woff') format('woff'),
+    url('../fonts/TTLakes-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Black.eot');
+  src: local('TT Lakes Black'), local('TTLakes-Black'),
+    url('../fonts/TTLakes-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Black.woff') format('woff'),
+    url('../fonts/TTLakes-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+    url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Medium.woff') format('woff'),
+    url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'TT Lakes';
+}
+.body {
+  display: flex;
+  background: $body-color;
+
+  @media (min-width: 600px) {
+    justify-content: center;
+    padding: 0 auto;
+  }
+}
